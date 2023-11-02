@@ -1,0 +1,23 @@
+<window
+    title="Новый филиал"
+    width="800px"
+    border="normal"
+    apply="ru.hoteladvisors.controller.CompanyOfficeNewController"
+>
+    <hlayout style="margin-bottom:20px" width="100%">
+        <button id="toCompanyButton" label="Назад" />
+    </hlayout>
+    <hlayout style="margin-top:20px" width="100%">
+        <vlayout hflex="1">
+            <hlayout>
+                <label value="Наименование:" />
+                <textbox id="nameTextbox" constraint="no empty" />
+            </hlayout>
+            <hlayout>
+                <label value="Адрес:" />
+                <combobox id="addressCombobox" width="150px" constraint="no empty" />
+            </hlayout>
+            <button id="addCompanyOfficeButton" label="Добавить компанию"/>
+        </vlayout>
+    </hlayout>
+</window>

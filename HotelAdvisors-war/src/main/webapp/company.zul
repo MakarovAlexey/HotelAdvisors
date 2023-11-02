@@ -1,0 +1,34 @@
+<window
+    title="Компания"
+    width="800px"
+    border="normal"
+    apply="ru.hoteladvisors.controller.CompanyProvider"
+>
+    <hlayout style="margin-bottom:20px" width="100%">
+        <button label="Назад" href="/companies.zul" />
+    </hlayout>
+    <hlayout>
+        Наименование: <label id="titleLabel" />
+    </hlayout>
+    <hlayout>
+        Правовая форма: <label id="formLabel" />
+    </hlayout>
+    <hlayout>
+        Адрес: <label id="addressLabel" />
+    </hlayout>
+    <listbox id="officeListbox">
+        <listhead>
+            <listheader label="Наименование" />
+            <listheader label="Адрес" width="20%"/>
+        </listhead>
+	<template name="model">
+            <listitem>
+                <listcell>${each.title}</listcell>
+                <listcell>${each.address}</listcell>
+            </listitem>
+	</template>
+    </listbox>
+    <hlayout style="margin-top:20px" width="100%">
+        <button id="newOfficeButton" label="Добавить филиал" />
+    </hlayout>
+</window>

@@ -1,0 +1,27 @@
+<window
+    title="Компании"
+    width="800px"
+    border="normal"
+    apply="ru.hoteladvisors.controller.CompaniesProvider"
+>
+    <hlayout style="margin-bottom:20px" width="100%">
+        <button label="На главную" href="index.zul" />
+    </hlayout>
+    <listbox id="companyListbox">
+        <listhead>
+            <listheader label="Наименование" />
+            <listheader label="Правовая форма" />
+            <listheader label="Адрес" width="20%"/>
+        </listhead>
+	<template name="model">
+            <listitem>
+                <listcell>${each.title}</listcell>
+                <listcell>${each.formOrNull.title}</listcell>
+                <listcell>${each.address}</listcell>
+            </listitem>
+	</template>
+    </listbox>
+    <hlayout style="margin-top:20px" width="100%">
+        <button label="Добавить компанию" href="company_new.zul" />
+    </hlayout>
+</window>

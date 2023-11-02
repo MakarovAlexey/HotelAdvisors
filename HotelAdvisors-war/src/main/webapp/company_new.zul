@@ -1,0 +1,33 @@
+<window
+    title="Новая компания"
+    width="800px"
+    border="normal"
+    apply="ru.hoteladvisors.controller.CompanyNewController"
+>
+    <hlayout style="margin-bottom:20px" width="100%">
+        <button label="Назад" href="/companies.zul" />
+    </hlayout>
+    <hlayout style="margin-top:20px" width="100%">
+        <vlayout hflex="1">
+            <hlayout>
+                <label value="Наименование:" />
+                <textbox id="companyNameTextbox" constraint="no empty" />
+            </hlayout>
+            <hlayout>
+                <label value="Организационная форма:" />
+                <vlayout>
+                    <radiogroup id="fromRaidoGroup">
+                        <radio id="ra1" label="ООО" radiogroup="fromRaidoGroup" />
+                        <radio id="ra2" label="ИП" radiogroup="fromRaidoGroup" />
+                        <radio id="ra3" label="АО" radiogroup="fromRaidoGroup" />
+                    </radiogroup>
+                </vlayout>
+            </hlayout>
+            <hlayout>
+                <label value="Адрес:" />
+                <combobox id="addressCombobox" width="150px" constraint="no empty" />
+            </hlayout>
+            <button id="addCompanyButton" label="Добавить компанию"/>
+        </vlayout>
+    </hlayout>
+</window>

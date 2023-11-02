@@ -1,0 +1,32 @@
+<window
+    title="Новый адрес"
+    width="800px"
+    border="normal"
+    apply="ru.hoteladvisors.controller.AddressNewController"
+>
+    <hlayout style="margin-top:20px" width="100%">
+        <vlayout hflex="1">
+            <hlayout>
+                <label value="Инекс:" />
+                <textbox id="postalCodeTextBox" maxlength="6" />
+            </hlayout>
+            <hlayout>
+                <label value="Город(*):" />
+                <textbox id="cityTextBox" constraint="no empty" />
+            </hlayout>
+            <hlayout>
+                <label value="Улица(*):" />
+                <textbox id="streetTextBox" constraint="no empty" />
+            </hlayout>
+            <hlayout>
+                <label value="Дом(*):" />
+                <textbox id="houseTextBox" constraint="no empty" />
+            </hlayout>
+            <hlayout>
+                <label value="Квартира:" />
+                <textbox id="flatTextbox" />
+            </hlayout>
+            <button id="addAddress" label="Добавить адрес"/>
+        </vlayout>
+    </hlayout>
+</window>

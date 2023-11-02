@@ -1,0 +1,31 @@
+<window
+    title="Адреса"
+    width="800px"
+    border="normal"
+    apply="ru.hoteladvisors.controller.AddressesController"
+>
+    <hlayout style="margin-bottom:20px" width="100%">
+        <button label="На главную" href="index.zul" />
+    </hlayout>
+    <listbox id="addressListbox">
+        <listhead>
+            <listheader label="Индекс" />
+            <listheader label="Город" />
+            <listheader label="Улица" />
+            <listheader label="Дом" />
+            <listheader label="Квартира" />
+        </listhead>
+	<template name="model">
+            <listitem>
+                <listcell>${each.postalCodeOrNull}</listcell>
+                <listcell>${each.city}</listcell>
+                <listcell>${each.street}</listcell>
+                <listcell>${each.house}</listcell>
+                <listcell>${each.flatOrNull}</listcell>
+            </listitem>
+	</template>
+    </listbox>
+    <hlayout style="margin-top:20px" width="100%">
+        <button label="Добавить адрес" href="address_new.zul" />
+    </hlayout>
+</window>

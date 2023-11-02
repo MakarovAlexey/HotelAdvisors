@@ -1,0 +1,8 @@
+<zk>
+    <window border="normal">
+        <vlayout>
+            <a href="companies.zul">Компании</a>
+            <a href="addresses.zul">Адреса</a>
+        </vlayout>
+    </window>
+</zk>
